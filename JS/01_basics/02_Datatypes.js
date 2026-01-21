@@ -4,6 +4,7 @@
 let name="vedika" //String
 let age=19        // Number
 let isLoggedIn=false; //Boolean
+Symbol;
 
 //Datatypes
 /*String,
