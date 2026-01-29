@@ -1,0 +1,9 @@
+const myarr=[1,2,3,4,5]
+// console.log(myarr[0])
+// console.log(myarr[myarr.length-1])
+// console.log(myarr.length)
+// myarr.push(6)
+// myarr.unshift(0)
+// myarr.pop()
+// myarr.shift()
+// console.log(myarr)

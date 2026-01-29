@@ -1,4 +1,4 @@
-const fulldate=now.toLocaleString(`en-In`,{
+// const fulldate=now.toLocaleString(`en-In`,{
 //     weekday:"long",
 //     year:"numeric",
 //     month:"long",
