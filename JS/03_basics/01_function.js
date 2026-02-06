@@ -11,8 +11,7 @@
 // }
 // console.log(mul(9,10))
 
-function isLogged(username){
+function isLogged(username="bittu"){
     return `${username} just logged in`
 }
-
 console.log(isLogged("vedika"))
