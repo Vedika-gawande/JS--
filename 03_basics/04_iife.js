@@ -1,5 +1,5 @@
 // IIFE (Immediately Invoked Fucntion Expression) 
-// It is used to control the pollution from global varaibales or function
+// It is used to git pull origin main --allow-unrelated-historiescontrol the pollution from global varaibales or function
 (
     function chai(){ // named iifi
         console.log("DB Connected")
