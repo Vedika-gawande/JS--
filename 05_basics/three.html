@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two</title>
+</head>
+<body style="background-color:blue; color: #ffff;" >
+  <h1>HTML Page</h1>
+  <p>This is a simple HTML file.</p>
+  <div class="parent">
+    <!-- This is comment -->
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div)
+    div.className="main";
+    div.id=Math.round(Math.random()*10+1);
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+    div.innerText="Chai aur Code"
+    document.body.appendChild(div);
+</script>
+</html>

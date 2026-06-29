@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Chai aur js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let intervalId;
+    const setTime = function () {
+      console.log("hiii", Date.now());
+    };
+    document.querySelector("#start").addEventListener("click", function () {
+       intervalId=setInterval(setTime, 2000);
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+        console.log("stopped");
+        clearInterval(intervalId);
+    });
+  </script>
+</html>
