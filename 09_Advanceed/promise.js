@@ -50,17 +50,45 @@
 //     console.log("Execution is completed")
 // })
 
-const promiseFive=new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error;
-        if(!error){
-            resolve({username:"vedika",pass:123})
-        }else{
-            reject("ERROR : Something went wrong")
-        }
-   },1000 )
-})
+// const promiseFive=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error=true;
+//         if(!error){
+//             resolve({username:"vedika",pass:123})
+//         }else{
+//             reject("ERROR : Something went wrong")
+//         }
+//    },1000 )
+// })
 
-async function consumePromiseFive(){
-    const response = await promiseFive
-}
+// async function consumePromiseFive(){
+//     try {
+//         const response = await promiseFive
+//         console.log(response)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// consumePromiseFive()
+
+// async function getAllusers() {
+//   try {
+//     const response = await fetch(
+//       "https://api.github.com/users/hiteshchoudhary",
+//     );
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getAllusers()
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=>console.log(error))
