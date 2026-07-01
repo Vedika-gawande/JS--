@@ -1,0 +1,66 @@
+// const promiseOne=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("Async task one completed")
+//         resolve(),1000});
+// })
+// promiseOne.then(function(){
+//     console.log("Promise 1 resolved")
+// })
+
+// new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("Async task 2")
+//         resolve(),2000})
+// }).then(function(){
+//     console.log("Promise 2 resolved")
+// })
+
+// const promiseThree=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve({username:"chai" , email:"chai@gamil.com"})
+//     },1000)
+// })
+// promiseThree.then(function(user){
+//     console.log(user)
+// })
+
+// const promiseFour=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error=true;
+//         if(error){
+//         resolve({username:"vedika",email:"vedika@gmail.com"})
+//         }else{
+//             reject("ERROR: Something went wrong")
+//         }
+//     },1000)
+// })
+
+// promiseFour
+// .then(function(user){
+//     console.log(user)
+//     return user.username
+// })
+// .then(function(username){
+//     console.log(`Username ${username}`)
+// })
+// .catch(function(error){
+//     console.log(error)
+// })
+// .finally(()=>{
+//     console.log("Execution is completed")
+// })
+
+const promiseFive=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error;
+        if(!error){
+            resolve({username:"vedika",pass:123})
+        }else{
+            reject("ERROR : Something went wrong")
+        }
+   },1000 )
+})
+
+async function consumePromiseFive(){
+    const response = await promiseFive
+}

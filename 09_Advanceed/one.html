@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is a simple HTML template.</p>
+    <button id="show"> Show</button><br><br>
+    <div id="card">
+    </div>
+<script>
+    let data;
+    const requesturl='https://api.github.com/users/hiteshchoudhary'
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requesturl)
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            data=JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(data.followers);
+            console.log(data.avatar_url)
+        }
+    }
+    xhr.send()
+    document.getElementById("show").addEventListener("click",function(){
+        if(!data){
+            alert("Data is loading....")
+            return;
+        }
+        
+        const card=document.getElementById("card")
+        card.innerHTML=`<img src="${data.avatar_url}" width="50">
+        <h2>Name : ${data.name} </h2>
+        <p>Followers : ${data.followers}</p>
+        <p> Following : ${data.following} </p>
+        <p> Public repo: ${data.public_repos} </p> 
+        <p> Bio: ${data.bio} </p> 
+        <p> Location: ${data.location}</p>`
+    })
+</script>
+  </body>
+</html>
